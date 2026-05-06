@@ -167,7 +167,7 @@ Host: redis://redis:6379
 
 ---
 
-## 🧪 Como Testar o sistema
+## 🧪 Como testar o sistema
 
 1. Buscar marcas (API-1)
 ```bash
