@@ -47,8 +47,15 @@ Certifique-se de ter instalado:
 
 ## 2. Subir o ambiente completo
 
-Na raiz do projeto, execute:
+Dentro da pasta api-1, execute:
 
+```bash
+openssl genrsa -out privateKey.pem 2048
+openssl pkcs8 -topk8 -inform PEM -in privateKey.pem -out privateKey.pk8 -nocrypt
+openssl rsa -in privateKey.pem -pubout -out publicKey.pem
+```
+
+Depois, dentro do projeto magnum_backend, execute o seguinte comando:
 ```bash
 docker-compose up --build
 ```
