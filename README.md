@@ -103,7 +103,7 @@ Lembre-se de autenticar com o token. Faça um GET para o endpoint abaixo. Se est
 http://localhost:8080/auth/token
 ```
 
-## Endpoint
+## Exemplo de endpoint da aplicação
 ```bash
 GET /marcas/{tipo}
 ```
