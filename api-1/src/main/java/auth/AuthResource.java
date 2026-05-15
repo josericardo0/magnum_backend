@@ -13,7 +13,7 @@ public class AuthResource {
         return Jwt.issuer("fipe-api")
                 .subject("user")
                 .groups("user")
-                .expiresAt(System.currentTimeMillis() + 3600)
+                .expiresAt((System.currentTimeMillis() / 1000) + 3600)
                 .sign();
     }
 }
