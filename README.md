@@ -98,6 +98,11 @@ Consultar marcas na API FIPE
 
 Enviar dados para fila RabbitMQ
 
+Lembre-se de autenticar com o token. Faça um GET para o endpoint abaixo. Se estiver usando o Postman, pegue o token gerado e coloque no Bearer Token, em Authorization. Depois disso, poderá executar todos os endpoints da aplicação.
+```bash
+http://localhost:8080/auth/token
+```
+
 ## Endpoint
 ```bash
 GET /marcas/{tipo}
