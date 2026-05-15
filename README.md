@@ -50,12 +50,10 @@ Certifique-se de ter instalado:
 Dentro da pasta api-1, execute:
 
 ```bash
-openssl genrsa -out privateKey.pem 2048
-openssl pkcs8 -topk8 -inform PEM -in privateKey.pem -out privateKey.pk8 -nocrypt
-openssl rsa -in privateKey.pem -pubout -out publicKey.pem
+docker run --rm -v ${PWD}:/app -w /app alpine sh -c "apk add --no-cache openssl && openssl genrsa -out src/main/resources/privateKey.pem 2048 && openssl pkcs8 -topk8 -inform PEM -in src/main/resources/privateKey.pem -out src/main/resources/privateKey.pk8 -nocrypt && openssl rsa -in src/main/resources/privateKey.pem -pubout -out src/main/resources/publicKey.pem"
 ```
 
-Depois, dentro do projeto magnum_backend, execute o seguinte comando:
+Depois, dentro da pasta magnum_backend, execute o seguinte comando:
 ```bash
 docker-compose up --build
 ```
